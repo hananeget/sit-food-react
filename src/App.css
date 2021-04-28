@@ -82,6 +82,11 @@
    margin-left: 20%;
    
  }
+ .favori{
+   float: right;
+  size: 30px;
+   color: rgb(253, 253, 253);
+ }
  
  [tabindex="-1"]:focus:not(:focus-visible) {
    outline: 0 !important;
@@ -91,6 +96,17 @@
    box-sizing: content-box;
    height: 0;
    overflow: visible;
+ }
+ .footer{
+   display: flex;
+   justify-content: space-between;
+   background-color: red !important;
+   height: 40px;
+   width: 100% !important;
+
+ }
+ .fab{
+   size: 80px !important;
  }
  
  h1, h2, h3, h4, h5, h6 {

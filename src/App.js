@@ -5,6 +5,7 @@ import logo from './component/FOOD.png';
 import Home from './component/Home';
 import Recipe from './component/Recipe';
 import {BrowserRouter, Route } from 'react-router-dom'
+import Footer from './component/Footer';
 
 
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/the-recipe" exact component={Recipe} />
           <Route path="/favori" exact component={Favori} />
+          <Footer/>
     </div>
     </BrowserRouter>
   );

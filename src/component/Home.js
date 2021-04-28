@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import photo from './undraw_cooking_lyxy.png';
 
+
+
 export class Home extends Component {
     render() {
         return (
@@ -28,6 +30,8 @@ export class Home extends Component {
                     </div>
                     
                     </div>
+                   
+                   
 
 
                 
