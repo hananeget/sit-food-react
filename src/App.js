@@ -4,11 +4,13 @@ import Favori from './component/Favori';
 import logo from './component/FOOD.png';
 import Home from './component/Home';
 import Recipe from './component/Recipe';
+import {BrowserRouter, Route } from 'react-router-dom'
 
 
 
 function App() {
   return (
+    <BrowserRouter>
     <div classNameName="App">
      <nav className="navbar navbar-expand-lg navbar-dark">
   <a className="navbar-brand ml-5" href="#"> <img src={logo}/>  MEZA <span>FOOD</span></a>
@@ -18,25 +20,25 @@ function App() {
 
   <div className="collapse navbar-collapse " id="navbarColor01">
     <ul className="navbar-nav ml-auto mr-5" >
-      <li className="nav-item active mr-3 ">
-        <a className="nav-link" href="#">Home
+      <li className="nav-item  mr-3 ">
+        <a className="nav-link" href="/">Home
         </a>
       </li>
       <li className="nav-item mr-3">
-        <a className="nav-link" href="#">the recipe</a>
+        <a className="nav-link" href="/the-recipe">the recipe</a>
       </li>
       <li className="nav-item mr-3">
-        <a className="nav-link" href="#"><i className="fas fa-heart"></i></a>
+        <a className="nav-link" href="/favori"><i className="fas fa-heart"></i></a>
       </li>
       </ul>
    
       </div>
      </nav>
-     <Home/>
-     <Recipe/>
-     <Favori/>
-     
+          <Route path="/" exact component={Home} />
+          <Route path="/the-recipe" exact component={Recipe} />
+          <Route path="/favori" exact component={Favori} />
     </div>
+    </BrowserRouter>
   );
 }
 
