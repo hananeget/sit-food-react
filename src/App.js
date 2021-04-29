@@ -14,7 +14,7 @@ function App() {
         <nav className="navbar navbar-expand-lg navbar-dark">
           <Link className="navbar-brand ml-5" href="#">
             {' '}
-            <img src={logo} /> MEZA/<span>FOOD</span>
+            <img src={logo} /> MEZA<span>FOOD</span>
           </Link>
           <button
             className="navbar-toggler"
