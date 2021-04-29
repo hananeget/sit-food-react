@@ -31,7 +31,7 @@ export class Recipe extends Component {
                     <a href={'show/' + resp.idMeal} className="btn btn-danger">
                       show more
                     </a>
-                    <a className="favori" href="/favori">
+                    <a className="favori " href="/favori">
                       <i className="fas fa-heart"></i>
                     </a>
                   </p>

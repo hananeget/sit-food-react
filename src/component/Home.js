@@ -24,17 +24,19 @@ export class Home extends Component {
       <div>
         <div className="row">
           <div className=" col-lg-6 text-center  d-flex justify-content-center align-items-center ">
-            <div>
-              <h2>Example body text</h2>
-              <p>
-                Nullam quis risus eget vel eu leo. Cum sociis natoque penatibus
-                et magnis dis parturient montes, nascetur ridiculus mus. Nullam
-                id dolor id nibh ultricies vehicula. This line of text is meant
-                to be treated as fine print. The following is{' '}
-                <strong>rendered as bold text</strong>. The following is{' '}
-                <em>rendered as italicized text</em>. An abbreviation of the
-                word attribute is <abbr title="attribute">attr</abbr>.
-              </p>
+            <div className="discription">
+              <h2>Bienvenue sur<span> MIZA/</span>FOOD</h2>
+              <strong>
+              Looking to cook easily? Simple and well-explained recipes? You are on the right site !
+                All the recipes you will find here have been designed to be easy to make: 
+                 each step is the subject of a photo, 
+                 it is accompanied by detailed explanations .
+                 But this site is not just a simple list of recipes,
+                  you will also find tips, tricks,
+                  tips and tricks,
+                  as well as many other sections that revolve around cooking in general.{' '}
+               
+              </strong>
             </div>
           </div>
           <div className="col-lg-6">
