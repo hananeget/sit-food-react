@@ -18,22 +18,30 @@ export class Show extends Component {
 
   render() {
     return (
-      <div className="row">
+      <div>
         {this.state.obj.map((gitDATA) => (
-          <div className="col-md-4">
-            <div className="card text-white bg-secondary mb-3">
+          <div className="row">
+            <div className="col-lg-6">
               <img className="card-img-top" src={gitDATA.strMealThumb} alt="" />
-              <div className="card-body">
-                <h4 className="card-title">{gitDATA.strMeal}</h4>
-                <p className="card-text">
-                  <a href={gitDATA.idMeal} className="btn btn-danger">
-                    show more
-                  </a>
-                  <a className="favori" href="/favori">
-                    <i className="fas fa-heart"></i>
-                  </a>
-                </p>
-              </div>
+            </div>
+            <div className="col-lg-6">
+              <h4 className="">
+                {gitDATA.strMeal}
+                <a className="m-5 for" href="">
+                  <i className="fas fa-heart"></i>
+                </a>
+              </h4>
+              <h2>Their components</h2>
+              <h3>
+                {gitDATA.strIngredient1} ,{gitDATA.strIngredient2},
+                {gitDATA.strIngredient3} ,{gitDATA.strIngredient4},
+                {gitDATA.strIngredient9} ,{gitDATA.strIngredient5},
+                {gitDATA.strIngredient6},{gitDATA.strIngredient7},
+                {gitDATA.strIngredient8},{gitDATA.strIngredient10},
+              </h3>
+              <h2>Preparation method</h2>
+
+              <h6> {gitDATA.strInstructions}</h6>
             </div>
           </div>
         ))}
