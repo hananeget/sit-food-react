@@ -11,7 +11,9 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
+.spanIcon {
+  font-size: 16px !important;
+}
 .searchbar {
   margin-bottom: auto;
   margin-top: auto;

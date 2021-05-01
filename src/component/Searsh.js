@@ -16,19 +16,19 @@ export class Searsh extends Component {
   render() {
     return (
       <div>
-        <div class="container h-100">
-          <div class="d-flex  justify-content-center h-100">
-            <form class="searchbar" onSubmit={this.searsh}>
+        <div className="container h-100">
+          <div className="d-flex  justify-content-center h-100">
+            <form className="searchbar" onSubmit={this.searsh}>
               <input
                 value={this.state.ggg}
                 onChange={this.handleForm}
-                class="search_input"
+                className="search_input"
                 type="text"
                 name=""
                 placeholder="Search... "
               />
-              <button class="search_icon">
-                <i class="fas fa-search"></i>
+              <button className="search_icon">
+                <i className="fas fa-search"></i>
               </button>
             </form>
           </div>

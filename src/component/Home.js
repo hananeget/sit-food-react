@@ -8,7 +8,7 @@ export class Home extends Component {
     obj: [],
   };
   GitDATAsearch = (data) => {
-    if (data != '') {
+    if (data !== '') {
       axios
         .get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${data}`)
         .then((Response) => {
@@ -40,7 +40,7 @@ export class Home extends Component {
             </div>
           </div>
           <div className="col-lg-6">
-            <img className="imgSVG" src={photo} />
+            <img className="imgSVG" src={photo} alt="imgsvg" />
           </div>
         </div>
         <div className="row mx-5">

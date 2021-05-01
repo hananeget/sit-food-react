@@ -22,7 +22,7 @@ export class Recipe extends Component {
       <div>
         <div className="row">
           {this.state.gitdata.map((resp) => (
-            <div className="col-md-4">
+            <div className="col-md-4" key={resp.idMeal}>
               <div className="card text-white bg-secondary mb-3">
                 <img className="card-img-top" src={resp.strMealThumb} alt="" />
                 <div className="card-body">

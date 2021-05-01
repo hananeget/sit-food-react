@@ -27,7 +27,7 @@ export class Show extends Component {
             <div className="col-lg-6">
               <h4 className="">
                 {gitDATA.strMeal}
-                <a className="m-5 for" href="">
+                <a className="m-5 for" href="/favori">
                   <i className="fas fa-heart"></i>
                 </a>
               </h4>
