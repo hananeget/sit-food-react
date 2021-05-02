@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 export class Recipe extends Component {
   state = {
     gitdata: [],
@@ -18,6 +19,7 @@ export class Recipe extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <div>
         <div className="row">
@@ -28,12 +30,15 @@ export class Recipe extends Component {
                 <div className="card-body">
                   <h4 className="card-title">{resp.strMeal}</h4>
                   <p className="card-text">
-                    <a href={'show/' + resp.idMeal} className="btn btn-danger">
+                    <Link to={'show/' + resp.idMeal} className="btn btn-danger">
                       show more
-                    </a>
-                    <a className="favori " href="/favori">
+                    </Link>
+                    <Link
+                      className="favori "
+                      to={'/the-recipe'}
+                      onClick={this.props.ajouter}>
                       <i className="fas fa-heart"></i>
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -45,4 +50,9 @@ export class Recipe extends Component {
   }
 }
 
-export default Recipe;
+function MapDispatchToProps(dispatch) {
+  return {
+    ajouter: () => dispatch({ type: 'INC' }),
+  };
+}
+export default connect(null, MapDispatchToProps)(Recipe);

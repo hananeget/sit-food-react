@@ -1,13 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export class Favori extends Component {
-    render() {
-        return (
-            <div>
-               Recipe 
-            </div>
-        )
-    }
+  render() {
+    return <div>hBHbHBH</div>;
+  }
 }
 
-export default Favori
+export default Favori;

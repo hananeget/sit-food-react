@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 export class SpanIcon extends Component {
-  state = {
-    con: 0,
-  };
-  change = () => {
-    this.setState({
-      con: +1,
-    });
-  };
   render() {
     return (
       <div>
         <i className="fas fa-heart"></i>
-        <span className="spanIcon">{this.state.con}</span>
+        <span className="spanIcon">{this.props.con}</span>
       </div>
     );
   }
 }
 
-export default SpanIcon;
+function mapStateToProps(state) {
+  return {
+    con: state.connt,
+  };
+}
+export default connect(mapStateToProps)(SpanIcon);

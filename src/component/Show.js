@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 export class Show extends Component {
   state = {
     obj: [],
@@ -27,11 +28,11 @@ export class Show extends Component {
             <div className="col-lg-6">
               <h4 className="">
                 {gitDATA.strMeal}
-                <a className="m-5 for" href="/favori">
+                <Link className="m-5 for" onClick={this.props.ajouter}>
                   <i className="fas fa-heart"></i>
-                </a>
+                </Link>
               </h4>
-              <h2>Their components</h2>
+              <h2>Their compon ents</h2>
               <h3>
                 {gitDATA.strIngredient1} ,{gitDATA.strIngredient2},
                 {gitDATA.strIngredient3} ,{gitDATA.strIngredient4},
@@ -50,4 +51,9 @@ export class Show extends Component {
   }
 }
 
-export default Show;
+function MapDispatchToProps(dispatch) {
+  return {
+    ajouter: () => dispatch({ type: 'INC' }),
+  };
+}
+export default connect(null, MapDispatchToProps)(Show);

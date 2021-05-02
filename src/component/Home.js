@@ -2,7 +2,8 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import Searsh from './Searsh';
 import photo from './undraw_cooking_lyxy.png';
-
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 export class Home extends Component {
   state = {
     obj: [],
@@ -66,9 +67,12 @@ export class Home extends Component {
                           className="btn btn-danger">
                           show more
                         </a>
-                        <a className="favori" href="/favori">
+                        <Link
+                          className="favori"
+                          to="/"
+                          onClick={this.props.ajouter}>
                           <i className="fas fa-heart"></i>
-                        </a>
+                        </Link>
                       </p>
                     </div>
                   </div>
@@ -82,4 +86,9 @@ export class Home extends Component {
   }
 }
 
-export default Home;
+function MapDispatchToProps(dispatch) {
+  return {
+    ajouter: () => dispatch({ type: 'INC' }),
+  };
+}
+export default connect(null, MapDispatchToProps)(Home);
