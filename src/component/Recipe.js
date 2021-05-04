@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { add_reminder } from './action/index';
+
 export class Recipe extends Component {
   state = {
     gitdata: [],
@@ -19,7 +21,6 @@ export class Recipe extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div>
         <div className="row">
@@ -35,8 +36,8 @@ export class Recipe extends Component {
                     </Link>
                     <Link
                       className="favori "
-                      to={'/the-recipe'}
-                      onClick={this.props.ajouter}>
+                      to={'/the-recipe/'}
+                      onClick={() => this.props.add_reminder(resp)}>
                       <i className="fas fa-heart"></i>
                     </Link>
                   </p>
@@ -50,9 +51,9 @@ export class Recipe extends Component {
   }
 }
 
-function MapDispatchToProps(dispatch) {
-  return {
-    ajouter: () => dispatch({ type: 'INC' }),
-  };
-}
-export default connect(null, MapDispatchToProps)(Recipe);
+// function MapDispatchToProps(dispatch) {
+//   return {
+//     ajouter: () => dispatch({add_reminder()}),
+//   };
+// }
+export default connect(null, { add_reminder })(Recipe);

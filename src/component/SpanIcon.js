@@ -6,7 +6,7 @@ export class SpanIcon extends Component {
     return (
       <div>
         <i className="fas fa-heart"></i>
-        <span className="spanIcon">{this.props.con}</span>
+        <span className="spanIcon">{this.props.Num}</span>
       </div>
     );
   }
@@ -14,7 +14,7 @@ export class SpanIcon extends Component {
 
 function mapStateToProps(state) {
   return {
-    con: state.connt,
+    con: state,
   };
 }
 export default connect(mapStateToProps)(SpanIcon);

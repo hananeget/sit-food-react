@@ -54,7 +54,6 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route path="/the-recipe" exact component={Recipe} />
             <Route path="/favori" exact component={Favori} />
-
             <Route path="/show/:login" exact component={Show} />
           </Switch>
 

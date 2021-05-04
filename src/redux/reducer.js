@@ -1,11 +1,13 @@
-const initState = {
-  connt: 4,
-};
-const reducer = (state = initState, acticon) => {
-  if (acticon.type === 'INC') {
-    return { connt: state.connt + 1 };
-  }
+import { ADD_REMINDER } from '../component/Types';
 
-  return state;
+const reminder = (state = [], action) => {
+  let reminder = [];
+  if (action.type === ADD_REMINDER) {
+    reminder = [...state, { data: action.data, Num: action.Num }];
+    console.log('from reduser', reminder);
+    return reminder;
+  } else {
+    return state;
+  }
 };
-export default reducer;
+export default reminder;
