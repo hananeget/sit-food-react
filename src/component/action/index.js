@@ -3,7 +3,7 @@ import { ADD_REMINDER ,REMOVE_REMINDER } from '../Types';
 export const add_reminder = (data, Num = 0) => {
   const action = {
     type: ADD_REMINDER,
-    data,
+    data ,
     Num,
   };
   console.log('add', action);
