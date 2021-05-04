@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+
 export class Show extends Component {
   state = {
     obj: [],
@@ -28,9 +28,9 @@ export class Show extends Component {
             <div className="col-lg-6">
               <h2 className="text-danger">
                 {gitDATA.strMeal}
-                <Link className="m-6  for" onClick={this.props.ajouter}>
+                <span className="m-6  for" onClick={this.props.ajouter}>
                   <i className="fas fa-heart"></i>
-                </Link>
+                </span>
               </h2>
               <h4 className="text-warning">Their components</h4>
               <p>

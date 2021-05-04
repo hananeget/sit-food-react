@@ -4,6 +4,7 @@ import Searsh from './Searsh';
 import photo from './undraw_cooking_lyxy.png';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { add_reminder } from './action/index';
 export class Home extends Component {
   state = {
     obj: [],
@@ -70,7 +71,7 @@ export class Home extends Component {
                         <Link
                           className="favori"
                           to="/"
-                          onClick={this.props.ajouter}>
+                          onClick={() => this.props.add_reminder(gitDATA)}>
                           <i className="fas fa-heart"></i>
                         </Link>
                       </p>
@@ -86,9 +87,4 @@ export class Home extends Component {
   }
 }
 
-function MapDispatchToProps(dispatch) {
-  return {
-    ajouter: () => dispatch({ type: 'INC' }),
-  };
-}
-export default connect(null, MapDispatchToProps)(Home);
+export default connect(null, { add_reminder })(Home);

@@ -11,10 +11,10 @@ import SpanIcon from './component/SpanIcon';
 function App() {
   return (
     <BrowserRouter>
-      <Route>
+     
         <div className="App">
           <nav className="navbar navbar-expand-lg navbar-dark">
-            <Link className="navbar-brand ml-5" href="#">
+            <Link className="navbar-brand ml-5" to="#">
               {' '}
               <img src={logo} alt="logo" /> MEZA<span>FOOD</span>
             </Link>
@@ -55,11 +55,13 @@ function App() {
             <Route path="/the-recipe" exact component={Recipe} />
             <Route path="/favori" exact component={Favori} />
             <Route path="/show/:login" exact component={Show} />
+           
+
           </Switch>
 
           <Footer />
         </div>
-      </Route>
+    
     </BrowserRouter>
   );
 }
