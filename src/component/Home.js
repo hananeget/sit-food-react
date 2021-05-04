@@ -24,13 +24,13 @@ export class Home extends Component {
   render() {
     return (
       <div>
-        <div className="row">
+        <div className="row ff">
           <div className=" col-lg-6 text-center  d-flex justify-content-center align-items-center ">
             <div className="discription">
               <h2>
                 Welcome to<span> MIZA</span>FOOD
               </h2>
-              <h5>
+              <h5 className="text">
                 Looking to cook easily? Simple and well-explained recipes? You
                 are on the right site ! All the recipes you will find here have
                 been designed to be easy to make: each step is the subject of a
@@ -51,7 +51,7 @@ export class Home extends Component {
           </div>
 
           <div>
-            <div className="row">
+            <div className="row mt-3">
               {this.state.obj.map((gitDATA) => (
                 <div className="col-md-4">
                   <div className="card text-white bg-secondary mb-3">

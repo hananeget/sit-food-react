@@ -23,13 +23,17 @@ export class Recipe extends Component {
   render() {
     return (
       <div>
-        <div className="row">
+        <div className="row ff mt-3 d-flex justify-content-center align-items-center">
           {this.state.gitdata.map((resp) => (
-            <div className="col-md-4" key={resp.idMeal}>
+            <div className="col-lg-3 col-md-4 col-sm-6" key={resp.idMeal}>
               <div className="card text-white bg-secondary mb-3">
-                <img className="card-img-top" src={resp.strMealThumb} alt="" />
+                <img
+                  className="card-img-top imagtt"
+                  src={resp.strMealThumb}
+                  alt=""
+                />
                 <div className="card-body">
-                  <h4 className="card-title">{resp.strMeal}</h4>
+                  <h6 className="card-title">{resp.strMeal}</h6>
                   <p className="card-text">
                     <Link to={'show/' + resp.idMeal} className="btn btn-danger">
                       show more

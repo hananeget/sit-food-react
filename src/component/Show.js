@@ -21,7 +21,7 @@ export class Show extends Component {
     return (
       <div>
         {this.state.obj.map((gitDATA) => (
-          <div className="row">
+          <div className="row mt-3">
             <div className="col-lg-6">
               <img className="card-img-top" src={gitDATA.strMealThumb} alt="" />
             </div>
@@ -33,7 +33,7 @@ export class Show extends Component {
                 </span>
               </h2>
               <h4 className="text-warning">Their components</h4>
-              <p>
+              <p className="text">
                 {gitDATA.strIngredient1},<br></br>
                 {gitDATA.strIngredient2},<br></br>
                 {gitDATA.strIngredient3} ,<br></br>
@@ -47,7 +47,7 @@ export class Show extends Component {
               </p>
               <h4 className="text-warning">Preparation method</h4>
 
-              <p> {gitDATA.strInstructions}</p>
+              <p className="text"> {gitDATA.strInstructions}</p>
             </div>
           </div>
         ))}
