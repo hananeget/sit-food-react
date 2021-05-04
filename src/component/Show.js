@@ -26,23 +26,28 @@ export class Show extends Component {
               <img className="card-img-top" src={gitDATA.strMealThumb} alt="" />
             </div>
             <div className="col-lg-6">
-              <h4 className="">
+              <h2 className="text-danger">
                 {gitDATA.strMeal}
-                <Link className="m-5 for" onClick={this.props.ajouter}>
+                <Link className="m-6  for" onClick={this.props.ajouter}>
                   <i className="fas fa-heart"></i>
                 </Link>
-              </h4>
-              <h2>Their compon ents</h2>
-              <h3>
-                {gitDATA.strIngredient1} ,{gitDATA.strIngredient2},
-                {gitDATA.strIngredient3} ,{gitDATA.strIngredient4},
-                {gitDATA.strIngredient9} ,{gitDATA.strIngredient5},
-                {gitDATA.strIngredient6},{gitDATA.strIngredient7},
-                {gitDATA.strIngredient8},{gitDATA.strIngredient10},
-              </h3>
-              <h2>Preparation method</h2>
+              </h2>
+              <h4 className="text-warning">Their components</h4>
+              <p>
+                {gitDATA.strIngredient1},<br></br>
+                {gitDATA.strIngredient2},<br></br>
+                {gitDATA.strIngredient3} ,<br></br>
+                {gitDATA.strIngredient4},<br></br>
+                {gitDATA.strIngredient9} ,<br></br>
+                {gitDATA.strIngredient5},<br></br>
+                {gitDATA.strIngredient6},<br></br>
+                {gitDATA.strIngredient7},<br></br>
+                {gitDATA.strIngredient8},<br></br>
+                {gitDATA.strIngredient10},<br></br>
+              </p>
+              <h4 className="text-warning">Preparation method</h4>
 
-              <h6> {gitDATA.strInstructions}</h6>
+              <p> {gitDATA.strInstructions}</p>
             </div>
           </div>
         ))}

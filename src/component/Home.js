@@ -29,7 +29,7 @@ export class Home extends Component {
               <h2>
                 Welcome to<span> MIZA</span>FOOD
               </h2>
-              <strong>
+              <h5>
                 Looking to cook easily? Simple and well-explained recipes? You
                 are on the right site ! All the recipes you will find here have
                 been designed to be easy to make: each step is the subject of a
@@ -37,7 +37,7 @@ export class Home extends Component {
                 site is not just a simple list of recipes, you will also find
                 tips, tricks, tips and tricks, as well as many other sections
                 that revolve around cooking in general.{' '}
-              </strong>
+              </h5>
             </div>
           </div>
           <div className="col-lg-6">
