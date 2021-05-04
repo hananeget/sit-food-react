@@ -35,7 +35,9 @@ export class Recipe extends Component {
                 <div className="card-body">
                   <h6 className="card-title">{resp.strMeal}</h6>
                   <p className="card-text">
-                    <Link to={'show/' + resp.idMeal} className="btn btn-danger">
+                    <Link
+                      to={'show/' + resp.idMeal}
+                      className="btn btn-success">
                       show more
                     </Link>
                     <Link

@@ -28,7 +28,7 @@ export class Home extends Component {
           <div className=" col-lg-6 text-center  d-flex justify-content-center align-items-center ">
             <div className="discription">
               <h2>
-                Welcome to<span> MIZA</span>FOOD
+                Welcome to<span> MEZA</span>FOOD
               </h2>
               <h5 className="text">
                 Looking to cook easily? Simple and well-explained recipes? You
@@ -65,7 +65,7 @@ export class Home extends Component {
                       <p className="card-text">
                         <a
                           href={'show/' + gitDATA.idMeal}
-                          className="btn btn-danger">
+                          className="btn btn-success">
                           show more
                         </a>
                         <Link

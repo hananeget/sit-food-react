@@ -60,10 +60,6 @@ body {
   margin: 0;
 }
 
-.footer-distributed h3 span {
-  color: #5383d3;
-}
-
 .footer-distributed .footer-links {
   color: #ffffff;
   margin: 20px 0 12px;
@@ -322,12 +318,7 @@ body {
   margin-top: 5%;
   padding: 5%;
 }
-.foo {
-  background-color: #db4335 !important;
-}
-.fo {
-  background-color: #810e03 !important;
-}
+
 .icon {
   margin-left: 20%;
 }
@@ -353,8 +344,12 @@ body {
 span {
   color: #f2cb05;
 }
+.hhh {
+  font: normal 20px 'Cookie', cursive;
+}
 .discription h2 {
-  color: #f21905;
+  color: #fa0404;
+  font: normal 50px 'Cookie', cursive;
 }
 .form-inline {
   margin-left: 20%;

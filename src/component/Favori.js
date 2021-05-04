@@ -9,8 +9,8 @@ export class Favori extends Component {
     for (let i = 0; i < data.length; i++) {
       table.push(data[i].data);
     }
-    var { hh } = this.props.id;
-    console.log('$$$$', hh);
+
+    console.log('favori', table);
     return (
       <div>
         <div className="row ff mt-3">
@@ -23,14 +23,14 @@ export class Favori extends Component {
                   <p className="card-text">
                     <Link
                       to={'/show/' + resp.idMeal}
-                      className="btn btn-danger">
+                      className="btn btn-success">
                       show more
                     </Link>
                     <Link
-                      to=""
-                      onClick={() => this.props.remove_reminder()}
+                      to="/favori"
+                      onClick={() => this.props.remove_reminder(resp.idMeal)}
                       className="btn btn-danger m-1">
-                      remove all
+                      <i class="fas fa-trash-alt"></i>
                     </Link>
                   </p>
                 </div>
@@ -46,7 +46,6 @@ export class Favori extends Component {
 function mapStateToProps(state) {
   return {
     obj: state,
-    id: state,
   };
 }
 export default connect(mapStateToProps, { remove_reminder })(Favori);
